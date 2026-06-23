@@ -288,7 +288,7 @@ img {
 }
 
 .hero-content h1 {
-    font-size: clamp(3.8rem, 7vw, 6.9rem);
+    font-size: clamp(3.2rem, 6vw, 5.8rem);
     line-height: .95;
     font-weight: 400;
     color: #fffaf1;
@@ -605,6 +605,16 @@ footer {
     max-width: 520px;
 }
 
+.about-hero-content .eyebrow{
+    font-size: 2.7rem;
+    margin-bottom: 26px;
+}
+
+.about-hero-content .eyebrow::after{
+    width:56px;
+    margin-top:12px;
+}
+
 .text-link {
     display: inline-block;
     margin-top: 10px;
@@ -878,9 +888,13 @@ footer {
         text-align: center;
     }
 
-    .about-hero-content p {
+    .about-hero-content p:not(.eyebrow) {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .about-hero-content .eyebrow{
+    font-size:2.35rem;
     }
 
     .about-hero-image img {
@@ -913,11 +927,15 @@ footer {
 
     .eyebrow{
         align-items:center;
+        font-size: 2.15rem;
+        margin-bottom: 20px;
     }
 
     .eyebrow::after{
         margin-left:auto;
         margin-right:auto;
+        width: 56px;
+        margin-top: 10px;
     }
 
     .community-text .small-outline-btn {
@@ -996,6 +1014,12 @@ footer {
         padding: 45px 24px;
     }
 
+    .special-section h2 {
+    max-width: 280px;
+    margin: 0 auto 22px;
+    line-height: 1.15;
+}
+
     .special-grid,
     .experience-strip,
     .feature-footer,
@@ -1037,9 +1061,14 @@ footer {
         font-size:2rem;
     }
 
-    .about-hero-content p {
+    .about-hero-content p:not(.eyebrow){
         font-size: .95rem;
         line-height: 1.8;
+    }
+
+
+    .about-hero-content .eyebrow{
+        font-size:2.15rem;
     }
 
     .philosophy-text h2,
