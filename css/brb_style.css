@@ -223,6 +223,38 @@ img {
 }
 
 /* =========================
+   REUSABLE EYEBROW
+========================= */
+
+.eyebrow{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-family: var(--font-script);
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: 1;
+
+    color: var(--gold);
+
+    margin-bottom: 22px;
+}
+
+.eyebrow::after{
+    content: "";
+    display: block;
+
+    width: 56px;
+    height: 2px;
+
+    margin-top: 12px;
+
+    background: var(--gold-light);
+    opacity: .8;
+}
+
+/* =========================
    HOME PAGE
 ========================= */
 
@@ -545,24 +577,18 @@ footer {
 
 .about-hero-content {
     max-width: 1400px;
-    margin: 55px auto 0;
+    margin: 35px auto 0;
     display: grid;
     grid-template-columns: 42% 58%;
     align-items: center;
     gap: 50px;
+    padding:80px 0;
 }
 
 .about-hero-content > div:first-child {
     padding-right: 25px;
 }
 
-.eyebrow {
-    color: var(--gold);
-    font-family: var(--font-script);
-    font-size: 2.6rem;
-    line-height: 1;
-    margin-bottom: 18px;
-}
 
 .about-hero-content h1 {
     font-size: 4rem;
@@ -571,7 +597,7 @@ footer {
     margin-bottom: 28px;
 }
 
-.about-hero-content p {
+.about-hero-content p:not(.eyebrow) {
     font-size: 1rem;
     line-height: 2;
     color: #444;
@@ -612,43 +638,56 @@ footer {
 .about-philosophy {
     display: grid;
     grid-template-columns: 40% 60%;
-    height: 360px;
+    height: 420px;
     overflow: hidden;
 }
 
 .philosophy-text {
     background: var(--olive-dark);
     color: var(--white);
-    padding: 45px 55px;
+    padding: 70px 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.philosophy-text .eyebrow {
-    font-size: 2.3rem;
-    margin-bottom: 10px;
-}
 
 .philosophy-text h2 {
     font-size: 2rem;
     margin: 10px 0 16px;
 }
 
-.philosophy-text p {
+.philosophy-text p:not(.eyebrow) {
     max-width: 560px;
     line-height: 1.7;
 }
 
 .philosophy-image {
-    height: 360px;
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,255,255,.04),
+        transparent 65%
+    ),
+    linear-gradient(
+        90deg,
+        #1d2413,
+        #2b311c
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    height: 420px;
 }
 
 .philosophy-image img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    width: 100%;
+    height: 100%;  
+    margin-top: 12px;
+    object-fit: contain;
+    transform: scale(1.08);
+    filter: drop-shadow(0 12px 28px rgba(0,0,0,.25));
 }
 
 /* ABOUT COMMUNITY */
@@ -675,16 +714,10 @@ footer {
 .community-text {
     background: var(--cream-dark);
     color: var(--text-dark);
-    padding: 45px 55px;
+    padding: 70px 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.community-text .eyebrow {
-    color: var(--gold);
-    font-size: 2.4rem;
-    margin-bottom: 12px;
 }
 
 .community-text h2 {
@@ -694,7 +727,7 @@ footer {
     margin: 8px 0 16px;
 }
 
-.community-text p {
+.community-text p:not(.eyebrow) {
     color: #333;
     line-height: 1.8;
     margin-bottom: 25px;
@@ -739,6 +772,7 @@ footer {
     font-family: var(--font-script);
     color: var(--text-muted);
 }
+
 
 /* =========================
    RESPONSIVE
@@ -836,7 +870,7 @@ footer {
 
     .about-hero-content {
         gap: 35px;
-        margin-top: 45px;
+        margin-top: 55px;
     }
 
     .about-hero-content > div:first-child {
@@ -861,14 +895,59 @@ footer {
 
     .philosophy-text,
     .community-text {
-        padding: 45px 30px;
+        padding: 60px 32px;
         text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
-    .philosophy-image,
+    .philosophy-text p:not(.eyebrow),
+    .community-text p:not(.eyebrow) {
+        max-width: 420px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .eyebrow{
+        align-items:center;
+    }
+
+    .eyebrow::after{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .community-text .small-outline-btn {
+        margin-top: 28px;
+    }
+
+    .philosophy-image {
+        height: auto;
+        min-height: 360px;
+        padding: 26px 0;
+        margin-top: 0;
+    }
+
     .community-image {
-        height: 320px;
+        height: 280px;
+        margin-top: 0;
+    }
+
+    .philosophy-image img {
+        width: min(88%, 520px);
+        height: auto;
+        object-fit: contain;
+        transform: none;
+    }
+
+    .community-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -954,10 +1033,8 @@ footer {
         padding: 22px 20px 0;
     }
 
-    .about-hero-content .eyebrow,
-    .philosophy-text .eyebrow,
-    .community-text .eyebrow {
-        font-size: 2.2rem;
+    .eyebrow{
+        font-size:2rem;
     }
 
     .about-hero-content p {
@@ -967,12 +1044,18 @@ footer {
 
     .philosophy-text h2,
     .community-text h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        max-width: 340px;
     }
 
-    .philosophy-image,
+    .philosophy-image {
+        min-height: 300px;
+        padding: 22px 0;
+    }
+
     .community-image {
-        height: 260px;
+        height: 220px;
     }
 
     .about-values {
