@@ -506,6 +506,318 @@ footer {
     font-size: 0.8rem;
 }
 
+/* ===================================================
+   ABOUT PAGE
+=================================================== */
+
+.about-hero {
+    background: #f6efe3;
+    color: #222;
+    padding: 35px 60px 0;
+    min-height: auto;
+}
+
+/* About page nav color override */
+.about-hero  .nav-links a {
+    color: #222;
+}
+
+.about-hero .nav-links a:hover,
+.about-hero .nav-links .active {
+    color: #b88b3d;
+}
+
+/* About hero layout */
+.about-hero-content {
+    max-width: 1400px;
+    margin: 55px auto 0;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    align-items: center;
+    gap: 50px;
+}
+
+/* This targets your first plain div */
+.about-hero-content > div:first-child {
+    padding-right: 25px;
+}
+
+.eyebrow {
+    color: #b88b3d;
+    font-family: "Brush Script MT", cursive;
+    font-size: 2.6rem;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.about-hero-content h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    color: #1d1d1d;
+    margin-bottom: 28px;
+}
+
+.about-hero-content p {
+    font-size: 1rem;
+    line-height: 2;
+    color: #444;
+    margin-bottom: 25px;
+    max-width: 520px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: #b88b3d;
+}
+
+.about-hero-image {
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Philosophy */
+.about-philosophy {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 360px;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.philosophy-text {
+    background: #1f2416;
+    color: #fff;
+    padding: 45px 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.philosophy-text h2 {
+    font-size: 2rem;
+    margin: 10px 0 16px;
+}
+
+.philosophy-text p {
+    max-width: 560px;
+    line-height: 1.7;
+}
+
+.philosophy-image {
+    height: 360px;
+    overflow: hidden;
+}
+
+.philosophy-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Community */
+
+.about-community {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    height: 340px;
+    overflow: hidden;
+    background: #efe7d8;
+}
+
+.community-image {
+    height: 340px;
+    overflow: hidden;
+}
+
+.community-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.community-text {
+    padding: 50px 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.community-text h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #222;
+    margin: 18px 0 22px;
+}
+
+.community-text p {
+    line-height: 2;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+
+.small-outline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 48px;
+    border: 1px solid #b88b3d;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.small-outline-btn:hover {
+    background: #b88b3d;
+    color: #fff;
+}
+
+/* Values */
+
+.about-values {
+    background: #2d311f;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 26px 60px;
+    text-align: center;
+}
+
+.about-values h4 {
+    font-size: .82rem;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #d4a94f;
+}
+
+
+/* Closing */
+.about-closing {
+    background: #f6efe3;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.about-closing p {
+    font-size: 2.4rem;
+    font-family: "Brush Script MT", cursive;
+    color: #555;
+}
+
+/* ABOUT EYEBROW FIX */
+
+.about-hero-content .eyebrow,
+.philosophy-text .eyebrow,
+.community-text .eyebrow {
+    color: #b88b3d;
+    font-family: "Brush Script MT", cursive;
+    font-size: 2.6rem;
+    line-height: 1;
+    margin-bottom: 18px;
+    max-width: none;
+}
+
+/* Dark section eyebrow */
+.philosophy-text .eyebrow {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+/* Community text fix */
+.community-text .eyebrow {
+    color: #4f4f4f;
+    font-size: 2.8rem;
+}
+
+.community-text p:not(.eyebrow) {
+    color: #333;
+    max-width: 620px;
+}
+
+/* Button fix */
+.small-outline-btn {
+    color: #b88b3d;
+    background: transparent;
+}
+
+.small-outline-btn:hover {
+    background: #b88b3d;
+    color: #fff;
+}
+
+/* Force community text to stay light */
+.about-community .community-text {
+    background: #efe7d8;
+    color: #222;
+    padding: 45px 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-community .community-text .eyebrow {
+    color: #b88b3d;
+    font-family: "Brush Script MT", cursive;
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.about-community .community-text h2 {
+    color: #1d1d1d;
+    font-size: 2rem;
+    margin: 8px 0 16px;
+}
+
+.about-community .community-text p {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 640px;
+}
+
+.about-community .small-outline-btn {
+    color: #b88b3d;
+    border: 1px solid #b88b3d;
+    background: transparent;
+}
+
+.about-community .small-outline-btn:hover {
+    background: #b88b3d;
+    color: #fff;
+}
+
 /*******************
 MOBILE RESPONSIVE
 *********************/
@@ -680,5 +992,103 @@ MOBILE RESPONSIVE
     footer {
         padding: 28px 24px;
         text-align: center;
+    }
+}
+
+/* =========================
+   ABOUT PAGE RESPONSIVE FIX
+========================= */
+
+@media (max-width: 900px) {
+    .about-hero {
+        padding: 24px;
+    }
+
+    .about-hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 45px;
+    }
+
+    .about-hero-content > div:first-child {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-hero-image img {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .about-philosophy,
+    .about-community {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .philosophy-text,
+    .about-community .community-text {
+        padding: 45px 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .philosophy-image,
+    .community-image {
+        height: 320px;
+    }
+
+    .about-values {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        padding: 22px 20px 0;
+    }
+
+    .about-hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .about-hero-content .eyebrow,
+    .philosophy-text .eyebrow,
+    .about-community .community-text .eyebrow {
+        font-size: 2.2rem;
+    }
+
+    .about-hero-content p {
+        font-size: .95rem;
+        line-height: 1.8;
+    }
+
+    .about-hero-image img {
+        max-width: 100%;
+    }
+
+    .philosophy-text h2,
+    .about-community .community-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .philosophy-image,
+    .community-image {
+        height: 260px;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .about-closing p {
+        font-size: 2rem;
     }
 }
