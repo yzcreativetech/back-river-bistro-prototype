@@ -1,0 +1,15 @@
+# Windows
+desktop.ini
+Thumbs.db
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Node (Future Projects)
+node_modules/
