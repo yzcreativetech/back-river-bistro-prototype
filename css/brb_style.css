@@ -407,6 +407,10 @@ img {
     transform: translateY(-3px);
 }
 
+.mobile-break{
+    display:none;
+}
+
 /* EXPERIENCE CARDS */
 
 .experience-strip {
@@ -1019,6 +1023,20 @@ footer {
     margin: 0 auto 22px;
     line-height: 1.15;
 }
+
+    .special-title{
+        max-width: 280px;
+        margin: 0 auto;
+        line-height: 1.15;
+    }
+
+    .special-title br{
+        display:block;
+    }
+
+    .mobile-break{
+        display:block;
+    }
 
     .special-grid,
     .experience-strip,
